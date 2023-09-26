@@ -6,6 +6,7 @@ class StartingScreen extends StatefulWidget {
   TextEditingController a2;
 
   StartingScreen(this.a1, this.a2, {super.key});
+
   static const String routename = "StartingScreen";
 
   @override
@@ -26,13 +27,12 @@ class _StartingScreenState extends State<StartingScreen> {
       if (widget.a2.text.isEmpty) {
         is_written2 = true;
       } else {
-        is_written2=false;
+        is_written2 = false;
       }
-      if(!is_written1 && !is_written2) {
+      if (!is_written1 && !is_written2) {
         Navigator.of(context).pushNamed(homescreen.routeName,
-            arguments:homescreen(widget.a1,widget.a2));
+            arguments: homescreen(widget.a1, widget.a2));
       }
-      
     });
   }
 
@@ -53,12 +53,11 @@ class _StartingScreenState extends State<StartingScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 40, left: 60, right: 60),
               child: Container(
-                decoration: const BoxDecoration( color: Colors.cyan,
-
-
+                decoration: const BoxDecoration(
+                    color: Colors.cyan,
                     borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(60),
-                    bottomRight: Radius.circular(60))),
+                        topLeft: Radius.circular(60),
+                        bottomRight: Radius.circular(60))),
                 width: double.infinity,
                 height: 120,
                 child: const Center(
@@ -74,21 +73,30 @@ class _StartingScreenState extends State<StartingScreen> {
             ),
             const SizedBox(height: 100),
             Padding(
-              padding: const EdgeInsets.only(left:16.0,right:16,top:6),
-              child: TextField(
-                controller: widget.a1,
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    hintText: "Enter Player 1 Name",
-                    hintStyle: const TextStyle(
-                        color: Colors.cyan, fontWeight: FontWeight.bold),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10))),
+              padding: const EdgeInsets.only(left: 16.0, right: 16, top: 6),
+              child: Container(
+                decoration: BoxDecoration(boxShadow: [
+                  BoxShadow(
+                    color: Colors.pink,
+                    blurRadius: 10,
+                    spreadRadius:10,
+                  ),
+                ]),
+                child: TextField(
+                  controller: widget.a1,
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Enter Player 1 Name",
+                      hintStyle: const TextStyle(
+                          color: Colors.cyan, fontWeight: FontWeight.bold),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10))),
+                ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top:10),
+              padding: const EdgeInsets.only(top: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -97,28 +105,39 @@ class _StartingScreenState extends State<StartingScreen> {
                     child: const Text(
                       textAlign: TextAlign.left,
                       "please enter player 1 name",
-                      style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.red, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 25.0, left: 16.0, right: 16.0),
-              child: TextField(
-                controller: widget.a2,
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    hintText: "Enter Player 2 Name",
-                    hintStyle: const TextStyle(
-                        color: Colors.cyan, fontWeight: FontWeight.bold),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10))),
+              padding:
+                  const EdgeInsets.only(top: 25.0, left: 16.0, right: 16.0),
+              child: Container(
+                decoration: BoxDecoration(boxShadow: [
+                  BoxShadow(
+                    color: Colors.pink,
+                    blurRadius: 10,
+                    spreadRadius:10,
+                  ),
+                ]),
+                child: TextField(
+                  controller: widget.a2,
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: "Enter Player 2 Name",
+                      hintStyle: const TextStyle(
+                          color: Colors.cyan, fontWeight: FontWeight.bold),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10))),
+                ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top:10),
+              padding: const EdgeInsets.only(top: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -127,7 +146,8 @@ class _StartingScreenState extends State<StartingScreen> {
                     child: const Text(
                       textAlign: TextAlign.left,
                       "please enter player 2 name",
-                      style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.red, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
@@ -138,20 +158,18 @@ class _StartingScreenState extends State<StartingScreen> {
               child: SizedBox(
                 width: 120,
                 height: 40,
-                child:
-                ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor:
-                    MaterialStateProperty
-                      .resolveWith<Color>(
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.resolveWith<Color>(
                           (Set<MaterialState> states) {
-                        return  Colors.cyan;
-                      }), ),
+                        return Colors.cyan;
+                      }),
+                    ),
                     onPressed: function,
                     child: const Text(
                       "Start Game",
-                      style:
-                          TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
                     )),
               ),
             )

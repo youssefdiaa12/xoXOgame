@@ -134,10 +134,7 @@ Expanded(
             },
           );
         }
- for(int i = 0; i <xo.length;i++){
-   xo[i]='';
-
- }
+        xo.clear();
       });
       return;
     } else if (xo[3] == xo[4] && xo[4] == xo[5] && xo[5] != '') {
@@ -164,10 +161,7 @@ Expanded(
             },
           );
         }
-        for(int i = 0; i <xo.length;i++){
-          xo[i]='';
-
-        }
+        xo.clear();
       });
       return;
     } else if (xo[6] == xo[7] && xo[7] == xo[8] && xo[8] != '') {
@@ -194,10 +188,7 @@ Expanded(
             },
           );
         }
-        for(int i = 0; i <xo.length;i++){
-          xo[i]='';
-
-        }
+        xo.clear();
       });
       return;
     } else if (xo[0] == xo[3] && xo[3] == xo[6] && xo[6] != '') {
@@ -224,10 +215,7 @@ Expanded(
             },
           );
         }
-        for(int i = 0; i <xo.length;i++){
-          xo[i]='';
-
-        }
+        xo.clear();
       });
       return;
     } else if (xo[1] == xo[4] && xo[4] == xo[7] && xo[7] != '') {
@@ -254,11 +242,7 @@ Expanded(
             },
           );
         }
-        for(int i = 0; i <xo.length;i++){
-          xo[i]='';
-
-        }
-
+        xo.clear();
       });
       return;
     } else if (xo[2] == xo[5] && xo[5] == xo[8] && xo[8] != '') {
@@ -285,10 +269,7 @@ Expanded(
             },
           );
         }
-        for(int i = 0; i <xo.length;i++){
-          xo[i]='';
-
-        }
+        xo.clear();
       });
       return;
     } else if (xo[0] == xo[4] && xo[4] == xo[8] &&xo[8] != '') {
@@ -315,9 +296,7 @@ Expanded(
             },
           );
         }
-        for(int i = 0; i <xo.length;i++){
-          xo[i]='';
-        }
+        xo.clear();
       });
       return;
     }
@@ -345,10 +324,7 @@ Expanded(
             },
           );
         }
-        for(int i = 0; i <xo.length;i++){
-          xo[i]='';
-
-        }
+      xo.clear();
 
       });
       return;
